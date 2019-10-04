@@ -1,5 +1,5 @@
 module.exports = {
-    mongoURI : 'mongodb+srv://cdevender:mongodb123%40@dev-af6ys.mongodb.net/storybooks?retryWrites=true&w=majority',
-    GOOGLE_CLIENT_ID : '929836033858-nnnn33pri0p21libnrp3uh8nkadosrvl.apps.googleusercontent.com',
-    GOOGLE_CLIENT_SECRET : 'rdR5xxT1km2MMB4fUVcq6ilE'
+    mongoURI : `mongodb+srv://${process.env.MONGOUSERNAME}:${process.env.MONGOPASSWORD}@dev-af6ys.mongodb.net/${process.env.MONGODBNAME}?retryWrites=true&w=majority`,
+    GOOGLE_CLIENT_ID : process.env.GOOGLE_CLIENT_ID,
+    GOOGLE_CLIENT_SECRET : process.env.GOOGLE_CLIENT_SECRET
 }
